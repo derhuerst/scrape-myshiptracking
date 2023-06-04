@@ -1,6 +1,6 @@
 # scrape-myshiptracking
 
-**Scrape vessel/ship positions from [myshiptracking.com](https://www.vesselfinder.com/).**
+**Scrape vessel/ship positions from [myshiptracking.com](https://myshiptracking.com/).**
 
 [![npm version](https://img.shields.io/npm/v/scrape-myshiptracking.svg)](https://www.npmjs.com/package/scrape-myshiptracking)
 ![ISC-licensed](https://img.shields.io/github/license/derhuerst/scrape-myshiptracking.svg)
@@ -18,14 +18,35 @@ npm install scrape-myshiptracking
 
 ## Usage
 
-### `fetchVessels(bbox, opt = {})`
-
 ```js
-// todo
+import {fetchData} from 'scrape-myshiptracking'
+
+const partOfHamburg = {
+	south: 53.516828,
+	north: 53.560591,
+	west: 9.878242,
+	east: 10.019656,
+}
+
+await fetchVessels(partOfHamburg)
 ```
 
 ```js
-// todo
+{
+	vessels: [
+		{
+			type: 'passenger',
+			name: 'BIRGIT EHLERS',
+			latitude: 53.54234,
+			longitude: 9.9528,
+			speedOverGround: 6.6,
+			course: 57.1,
+			t: 1685198425,
+			headingFor: 'HAMBURG',
+		},
+		// …
+	],
+}
 ```
 
 
